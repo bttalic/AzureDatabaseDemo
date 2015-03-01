@@ -1,0 +1,25 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+
+#PostController routes
+GET    /post							controllers.PostController.all()
+GET   /post/new						controllers.PostController.newPost()
+POST  /post/create					controllers.PostController.create()
+GET   /post/update/:id				controllers.PostController.update(id: Int)
+POST  /post/update/:id					controllers.PostController.save(id: Int)
+GET   /post/:id						controllers.PostController.show(id: Int)
+GET   /post/delete/:id				controllers.PostController.delete(id: Int)
+
+GET    /							controllers.UserController.all()
+GET   /user/new						controllers.UserController.newUser()
+POST  /user/create					controllers.UserController.create()
+GET   /user/update/:id				controllers.UserController.update(id: Int)
+POST  /user/update/:id					controllers.UserController.save(id: Int)
+GET   /user/:id						controllers.UserController.show(id: Int)
+GET   /user/delete/:id				controllers.UserController.delete(id: Int)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

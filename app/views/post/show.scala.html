@@ -1,0 +1,10 @@
+@(post: Post)
+
+@main(post.title){
+	<h1> @post.title </h1>
+	<p> @post.content </p>
+	
+	<a href="@routes.PostController.update(post.id)"> Update </a>
+	<br />
+	<a href="@routes.PostController.delete(post.id)"> Delete </a>
+}

@@ -1,0 +1,9 @@
+@(user: DUser)
+
+@main(user.email){
+	<h1> @user.email </h1>
+	
+	<a href="@routes.UserController.update(user.id)"> Update </a>
+	<br />
+	<a href="@routes.UserController.delete(user.id)"> Delete </a>
+}

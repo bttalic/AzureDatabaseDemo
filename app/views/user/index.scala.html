@@ -1,0 +1,12 @@
+@(users: List[DUser])
+
+@main("User Index"){
+	<h1> Users list: </h1>
+	@for(user <- users){
+		<div>
+			<h2> @user.email </h2>
+		</div>
+		<br />
+	}
+	
+}
